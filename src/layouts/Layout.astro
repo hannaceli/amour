@@ -1,0 +1,91 @@
+---
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Join us in Burgundy, France to celebrate 10 years of love. July 4-11, 2026 at La Fabrique des Ducs, Epinac." />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content="10-Year Wedding Anniversary Celebration in Burgundy, France. July 4-11, 2026." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-cream text-charcoal font-sans antialiased">
+    <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="#hero" class="font-serif text-2xl font-bold text-wine">Amour</a>
+          <button id="menu-toggle" class="md:hidden p-2 text-charcoal" aria-label="Toggle menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          <div class="hidden md:flex items-center gap-8">
+            <a href="#venue" class="text-sm font-medium text-charcoal/70 hover:text-wine transition-colors">Venue</a>
+            <a href="#getting-there" class="text-sm font-medium text-charcoal/70 hover:text-wine transition-colors">Getting There</a>
+            <a href="#schedule" class="text-sm font-medium text-charcoal/70 hover:text-wine transition-colors">Schedule</a>
+            <a href="#activities" class="text-sm font-medium text-charcoal/70 hover:text-wine transition-colors">Activities</a>
+            <a href="#wine-and-dining" class="text-sm font-medium text-charcoal/70 hover:text-wine transition-colors">Wine & Dining</a>
+            <a href="#travel-form" class="text-sm font-medium text-charcoal/70 hover:text-wine transition-colors">Travel Form</a>
+            <a href="#practical-info" class="text-sm font-medium text-charcoal/70 hover:text-wine transition-colors">Info</a>
+          </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+          <div class="flex flex-col gap-3 pt-2">
+            <a href="#venue" class="mobile-nav-link text-sm font-medium text-charcoal/70 hover:text-wine transition-colors">Venue</a>
+            <a href="#getting-there" class="mobile-nav-link text-sm font-medium text-charcoal/70 hover:text-wine transition-colors">Getting There</a>
+            <a href="#schedule" class="mobile-nav-link text-sm font-medium text-charcoal/70 hover:text-wine transition-colors">Schedule</a>
+            <a href="#activities" class="mobile-nav-link text-sm font-medium text-charcoal/70 hover:text-wine transition-colors">Activities</a>
+            <a href="#wine-and-dining" class="mobile-nav-link text-sm font-medium text-charcoal/70 hover:text-wine transition-colors">Wine & Dining</a>
+            <a href="#travel-form" class="mobile-nav-link text-sm font-medium text-charcoal/70 hover:text-wine transition-colors">Travel Form</a>
+            <a href="#practical-info" class="mobile-nav-link text-sm font-medium text-charcoal/70 hover:text-wine transition-colors">Info</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <slot />
+
+    <script>
+      const toggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('mobile-menu');
+      toggle?.addEventListener('click', () => {
+        menu?.classList.toggle('hidden');
+      });
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => menu?.classList.add('hidden'));
+      });
+
+      // Countdown
+      function updateCountdown() {
+        const target = new Date('2026-07-04T14:00:00+02:00').getTime();
+        const now = Date.now();
+        const diff = target - now;
+        const el = document.getElementById('countdown');
+        if (!el) return;
+        if (diff <= 0) { el.textContent = "The celebration has begun!"; return; }
+        const days = Math.floor(diff / 86400000);
+        const hours = Math.floor((diff % 86400000) / 3600000);
+        const mins = Math.floor((diff % 3600000) / 60000);
+        const dEl = document.getElementById('cd-days');
+        const hEl = document.getElementById('cd-hours');
+        const mEl = document.getElementById('cd-mins');
+        if (dEl) dEl.textContent = String(days);
+        if (hEl) hEl.textContent = String(hours);
+        if (mEl) mEl.textContent = String(mins);
+      }
+      updateCountdown();
+      setInterval(updateCountdown, 60000);
+    </script>
+  </body>
+</html>
