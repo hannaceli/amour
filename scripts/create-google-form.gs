@@ -143,7 +143,7 @@ function createTravelForm() {
     .setHelpText('e.g. "2 adults, 1 child bike, 1 child seat"');
 
   form.addMultipleChoiceItem()
-    .setTitle('Lake Day at Lac des Settons (Tuesday July 7) — are you interested?')
+    .setTitle('Lake Day at Lac des Settons (Wednesday July 8) — are you interested?')
     .setHelpText('A full day at a beautiful lake in the Morvan: sailing, kayak, paddle, inflatable water park, Blue Flag beach. ~1h15 drive.')
     .setChoiceValues(['Yes, count us in!', 'Probably — tell me more', 'Not for us this time'])
     .setRequired(true);
