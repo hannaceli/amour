@@ -53,6 +53,11 @@ const { title } = Astro.props;
         font-size: 0.95rem;
         line-height: 1;
       }
+      /* Illustration JPEGs: kill legacy UA frame + baseline gap */
+      img {
+        border-style: none;
+        vertical-align: middle;
+      }
     </style>
   </head>
   <body class="bg-cream text-charcoal font-serif antialiased overflow-x-hidden">
@@ -73,7 +78,6 @@ const { title } = Astro.props;
           <div class="hidden md:flex items-center gap-6 lg:gap-8 flex-wrap justify-end">
             <a href="#venue" class="text-sm font-medium text-charcoal/70 hover:text-wine transition-colors py-2">Venue</a>
             <a href="#getting-there" class="text-sm font-medium text-charcoal/70 hover:text-wine transition-colors py-2">Getting There</a>
-            <a href="#schedule" class="text-sm font-medium text-charcoal/70 hover:text-wine transition-colors py-2">Schedule</a>
             <a href="#activities" class="text-sm font-medium text-charcoal/70 hover:text-wine transition-colors py-2">Activities</a>
             <a href="#wine-and-dining" class="text-sm font-medium text-charcoal/70 hover:text-wine transition-colors py-2">Wine & Dining</a>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScSMKUpWXlexMgfIavlm9XgbkLAVlCeAGSx2-z355DoDqeU3Q/viewform" target="_blank" rel="noopener" class="text-sm font-medium text-charcoal/70 hover:text-wine transition-colors py-2">Travel Form</a>

@@ -1,0 +1,30 @@
+---
+/**
+ * Icons use 512×512 JPEGs from scripts/normalize-illustration-icons.py (per-image frame removal).
+ */
+interface Props {
+  src: string;
+  alt: string;
+  size?: "sm" | "md" | "lg" | "xl";
+  class?: string;
+}
+
+const { src, alt, size = "md", class: className = "" } = Astro.props;
+
+const box: Record<NonNullable<Props["size"]>, string> = {
+  sm: "h-8 w-8",
+  md: "h-10 w-10",
+  lg: "h-12 w-12",
+  xl: "h-32 w-32",
+};
+
+const cls = [
+  box[size],
+  "block shrink-0 m-0 max-h-none max-w-none p-0 align-middle",
+  "object-cover object-center",
+  "border-0 outline-none ring-0 shadow-none",
+  className,
+].filter(Boolean).join(" ");
+---
+
+<img src={src} alt={alt} class={cls} loading="lazy" decoding="async" />

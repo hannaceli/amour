@@ -1,9 +1,10 @@
 ---
+import WatercolorIcon from "./WatercolorIcon.astro";
 ---
 
-<section id="getting-there" class="py-16 sm:py-20 bg-white scroll-mt-20">
+<section id="getting-there" class="py-10 sm:py-12 bg-white scroll-mt-16">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
+    <div class="text-center mb-10 sm:mb-11">
       <p class="font-display italic text-gold text-lg mb-2">Plan your journey</p>
       <h2 class="font-display text-3xl sm:text-5xl font-bold text-wine tracking-tight">Getting There</h2>
       <div class="section-rule mt-5" aria-hidden="true"><span>§</span></div>
@@ -13,13 +14,13 @@
       </p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8 mb-12">
+    <div class="grid md:grid-cols-3 gap-6 mb-8 sm:mb-10">
       <!-- By Air -->
-      <div class="bg-cream rounded-2xl p-8 shadow-sm">
-        <div class="w-12 h-12 rounded-full bg-wine-50 flex items-center justify-center mb-5">
-          <svg class="w-6 h-6 text-wine" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+      <div class="bg-cream rounded-2xl p-4 sm:p-5 shadow-sm">
+        <div class="flex items-center gap-3 sm:gap-4 mb-5">
+          <WatercolorIcon src="/illustrations/wc-plane.jpg" alt="" size="xl" />
+          <h3 class="font-display text-2xl font-semibold text-wine leading-tight">By Air</h3>
         </div>
-        <h3 class="font-display text-2xl font-semibold text-wine mb-4">By Air</h3>
         <ul class="space-y-3 text-charcoal/70">
           <li class="flex items-start gap-2">
             <span class="text-gold font-bold mt-0.5">&#8250;</span>
@@ -41,11 +42,11 @@
       </div>
 
       <!-- By Train -->
-      <div class="bg-cream rounded-2xl p-8 shadow-sm">
-        <div class="w-12 h-12 rounded-full bg-wine-50 flex items-center justify-center mb-5">
-          <svg class="w-6 h-6 text-wine" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+      <div class="bg-cream rounded-2xl p-4 sm:p-5 shadow-sm">
+        <div class="flex items-center gap-3 sm:gap-4 mb-5">
+          <WatercolorIcon src="/illustrations/wc-train.jpg" alt="" size="xl" />
+          <h3 class="font-display text-2xl font-semibold text-wine leading-tight">By Train</h3>
         </div>
-        <h3 class="font-display text-2xl font-semibold text-wine mb-4">By Train</h3>
         <ul class="space-y-3 text-charcoal/70">
           <li class="flex items-start gap-2">
             <span class="text-gold font-bold mt-0.5">&#8250;</span>
@@ -64,11 +65,11 @@
       </div>
 
       <!-- By Car -->
-      <div class="bg-cream rounded-2xl p-8 shadow-sm">
-        <div class="w-12 h-12 rounded-full bg-wine-50 flex items-center justify-center mb-5">
-          <svg class="w-6 h-6 text-wine" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10m14 0V8a1 1 0 00-.76-.97l-4-1A1 1 0 0011 7v9"/></svg>
+      <div class="bg-cream rounded-2xl p-4 sm:p-5 shadow-sm">
+        <div class="flex items-center gap-3 sm:gap-4 mb-5">
+          <WatercolorIcon src="/illustrations/wc-car.jpg" alt="" size="xl" />
+          <h3 class="font-display text-2xl font-semibold text-wine leading-tight">By Car</h3>
         </div>
-        <h3 class="font-display text-2xl font-semibold text-wine mb-4">By Car</h3>
         <ul class="space-y-3 text-charcoal/70">
           <li class="flex items-start gap-2">
             <span class="text-gold font-bold mt-0.5">&#8250;</span>
@@ -98,6 +99,22 @@
       <a href="#travel-form" class="inline-block bg-wine hover:bg-wine-dark text-white font-medium px-6 py-3 rounded-full transition-colors text-sm uppercase tracking-wider">
         Fill Out the Travel Form
       </a>
+    </div>
+
+    <div id="see-you" class="mt-10 sm:mt-12 pt-10 sm:pt-12 border-t border-charcoal/10 max-w-2xl mx-auto text-center px-4 sm:px-6 scroll-mt-16">
+      <img
+        src="/wedding.jpg"
+        alt="Hanna and Jon"
+        class="w-full max-w-md mx-auto rounded-2xl shadow-lg object-cover aspect-[4/5] sm:aspect-[3/4]"
+        width="448"
+        height="560"
+        loading="lazy"
+        decoding="async"
+      />
+      <p class="font-display text-2xl sm:text-3xl text-wine italic mt-8 sm:mt-10 leading-snug">
+        We can&rsquo;t wait to see you there.
+      </p>
+      <p class="text-charcoal/55 text-sm sm:text-base mt-3">Hanna &amp; Jon</p>
     </div>
   </div>
 </section>
