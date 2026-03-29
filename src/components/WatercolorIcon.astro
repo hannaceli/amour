@@ -11,12 +11,12 @@ interface Props {
 
 const { src, alt, size = "md", class: className = "" } = Astro.props;
 
-// ~⅔ surface area vs prior squares → linear scale √(⅔) on each edge
+// Edge length ~½ previous step (¼ prior surface area vs original 8rem xl)
 const box: Record<NonNullable<Props["size"]>, string> = {
-  sm: "h-[1.63rem] w-[1.63rem]",
-  md: "h-[2.04rem] w-[2.04rem]",
-  lg: "h-[2.45rem] w-[2.45rem]",
-  xl: "h-[6.53rem] w-[6.53rem]",
+  sm: "h-[0.815rem] w-[0.815rem]",
+  md: "h-[1.02rem] w-[1.02rem]",
+  lg: "h-[1.225rem] w-[1.225rem]",
+  xl: "h-[3.265rem] w-[3.265rem]",
 };
 
 const cls = [
