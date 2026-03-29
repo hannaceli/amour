@@ -1,5 +1,12 @@
 ---
 import WatercolorIcon from "./WatercolorIcon.astro";
+
+const cardLink =
+  "block bg-cream rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow group text-charcoal no-underline visited:text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wine";
+const cardStatic = "bg-cream rounded-2xl p-4 sm:p-5 shadow-sm";
+const titleClass = "font-semibold text-charcoal group-hover:text-wine transition-colors";
+const bodyClass = "text-sm text-charcoal/70 leading-relaxed";
+const metaClass = "text-xs text-charcoal/50";
 ---
 
 <section id="activities" class="py-10 sm:py-12 bg-white scroll-mt-16">
@@ -15,93 +22,45 @@ import WatercolorIcon from "./WatercolorIcon.astro";
       <h3 class="font-display text-2xl font-semibold text-wine mb-6 sm:mb-7 text-center">What We&rsquo;ve Planned</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <a href="https://www.francevelotourisme.com/itineraire/itinerance-verte-en-autunois-morvan/epinac-autun" target="_blank" rel="noopener"
-           class="block bg-cream rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow group text-inherit no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wine">
+        <a href="https://www.francevelotourisme.com/itineraire/itinerance-verte-en-autunois-morvan/epinac-autun" target="_blank" rel="noopener" class={cardLink}>
           <div class="flex items-start gap-3 sm:gap-4 mb-3">
             <WatercolorIcon src="/illustrations/wc-act-bike.jpg" alt="" size="xl" />
             <div class="min-w-0 pt-0.5">
-              <h4 class="font-semibold text-charcoal group-hover:text-wine transition-colors">Voie Verte Cycling</h4>
-              <p class="text-xs text-charcoal/50">Monday, July 6</p>
+              <h4 class={titleClass}>Voie Verte Cycling</h4>
+              <p class={metaClass}>Monday, July 6</p>
             </div>
           </div>
-          <p class="text-sm text-charcoal/70">
+          <p class={bodyClass}>
             Flat scenic path on a former railway, starting right in Epinac. 13 km of paved path towards Autun.
             Perfect for families &mdash; including toddlers in bike seats.
           </p>
         </a>
 
-        <a href="https://www.autun-tourisme.com/offres/base-de-loisirs-de-la-dree-epinac-fr-3456549/" target="_blank" rel="noopener"
-           class="block bg-cream rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow group text-inherit no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wine">
-          <div class="flex items-start gap-3 sm:gap-4 mb-3">
-            <WatercolorIcon src="/illustrations/wc-act-minigolf.jpg" alt="" size="xl" />
-            <div class="min-w-0 pt-0.5">
-              <h4 class="font-semibold text-charcoal group-hover:text-wine transition-colors">Base de Loisirs de la Dr&eacute;e</h4>
-              <p class="text-xs text-charcoal/50">Sunday, July 5</p>
-            </div>
-          </div>
-          <p class="text-sm text-charcoal/70">
-            Mini-golf, playground, ping-pong, baby-foot, and a riverside picnic area.
-            Free entry, right here in Epinac.
-          </p>
-        </a>
-
-        <a href="https://www.chateaudecouches.com/" target="_blank" rel="noopener"
-           class="block bg-cream rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow group text-inherit no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wine">
-          <div class="flex items-start gap-3 sm:gap-4 mb-3">
-            <WatercolorIcon src="/illustrations/wc-act-castle.jpg" alt="" size="xl" />
-            <div class="min-w-0 pt-0.5">
-              <h4 class="font-semibold text-charcoal group-hover:text-wine transition-colors">Ch&acirc;teau de Couches</h4>
-              <p class="text-xs text-charcoal/50">Tuesday, July 7</p>
-            </div>
-          </div>
-          <p class="text-sm text-charcoal/70">
-            11th-century fortress with wine tasting (6 wines), towers, underground passages,
-            and a Gothic chapel. Kids love the tunnels!
-          </p>
-        </a>
-
-        <a href="https://www.sportnatureautun.fr/decouvrez-activites-incontournables-lac-settons-baignade-peche-sports-nautiques/" target="_blank" rel="noopener"
-           class="block bg-cream rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow group text-inherit no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wine">
+        <a href="https://www.sportnatureautun.fr/decouvrez-activites-incontournables-lac-settons-baignade-peche-sports-nautiques/" target="_blank" rel="noopener" class={cardLink}>
           <div class="flex items-start gap-3 sm:gap-4 mb-3">
             <WatercolorIcon src="/illustrations/wc-act-lake.jpg" alt="" size="xl" />
             <div class="min-w-0 pt-0.5">
-              <h4 class="font-semibold text-charcoal group-hover:text-wine transition-colors">Lac des Settons</h4>
-              <p class="text-xs text-charcoal/50">Wednesday, July 8</p>
+              <h4 class={titleClass}>Lac des Settons</h4>
+              <p class={metaClass}>Wednesday, July 8</p>
             </div>
           </div>
-          <p class="text-sm text-charcoal/70">
+          <p class={bodyClass}>
             366-hectare lake in the Morvan. Sailing, kayak, paddleboard, pedalo, inflatable water park,
             and a Blue Flag beach with lifeguards.
           </p>
         </a>
 
-        <a href="https://acrogivry.fr/" target="_blank" rel="noopener"
-           class="block bg-cream rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow group text-inherit no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wine">
+        <a href="#venue" class={cardLink}>
           <div class="flex items-start gap-3 sm:gap-4 mb-3">
-            <WatercolorIcon src="/illustrations/wc-act-trees.jpg" alt="" size="xl" />
+            <WatercolorIcon src="/venue-pool-wc.jpg" alt="La Fabrique des Ducs — heated pool and gardens — watercolor illustration" size="xl" />
             <div class="min-w-0 pt-0.5">
-              <h4 class="font-semibold text-charcoal group-hover:text-wine transition-colors">Acrogivry &mdash; Treetop Adventure</h4>
-              <p class="text-xs text-charcoal/50">Sunday, July 5</p>
+              <h4 class={titleClass}>Hanging out by the pool</h4>
+              <p class={metaClass}>All week</p>
             </div>
           </div>
-          <p class="text-sm text-charcoal/70">
-            The largest adventure park in Burgundy! 31 courses, 350+ aerial challenges.
-            13 kids&rsquo; courses (from age 3) and 18 for teens/adults up to 20m high.
-          </p>
-        </a>
-
-        <a href="#venue"
-           class="block bg-cream rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow group text-inherit no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wine">
-          <div class="flex items-start gap-3 sm:gap-4 mb-3">
-            <WatercolorIcon src="/illustrations/wc-act-pool.jpg" alt="" size="xl" />
-            <div class="min-w-0 pt-0.5">
-              <h4 class="font-semibold text-charcoal group-hover:text-wine transition-colors">Pool &amp; Grounds at the Venue</h4>
-              <p class="text-xs text-charcoal/50">Every day</p>
-            </div>
-          </div>
-          <p class="text-sm text-charcoal/70">
-            The heated pool (with retractable dome), terraces, and sprawling grounds are always available.
-            Game room for rainy days or when the kids need a break.
+          <p class={bodyClass}>
+            The heated pool (with retractable dome), terraces, and sprawling grounds at La Fabrique des Ducs
+            are yours whenever you like. Game room for rainy days or when the kids need a break.
           </p>
         </a>
 
@@ -110,122 +69,154 @@ import WatercolorIcon from "./WatercolorIcon.astro";
 
     <!-- Other Things To Do -->
     <div>
-      <h3 class="font-display text-2xl font-semibold text-wine mb-3 text-center">More Things To Do</h3>
-      <p class="text-center text-charcoal/60 mb-6 sm:mb-7 max-w-xl mx-auto">
+      <h3 class="font-display text-2xl font-semibold text-wine mb-6 sm:mb-7 text-center">More Things To Do</h3>
+      <p class="text-center text-sm text-charcoal/70 mb-6 sm:mb-7 max-w-xl mx-auto leading-relaxed">
         For free days or if you want to explore on your own, here are more activities in the area.
       </p>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-        <a href="https://www.lesgambades-equitation.fr/" target="_blank" rel="noopener"
-           class="block bg-cream rounded-xl p-4 sm:p-5 hover:shadow-md transition-shadow group">
-          <div class="flex items-start gap-3 sm:gap-4">
+        <a href="https://www.autun-tourisme.com/offres/base-de-loisirs-de-la-dree-epinac-fr-3456549/" target="_blank" rel="noopener" class={cardLink}>
+          <div class="flex items-start gap-3 sm:gap-4 mb-3">
+            <WatercolorIcon src="/illustrations/wc-act-minigolf.jpg" alt="" size="xl" />
+            <div class="min-w-0 pt-0.5">
+              <h4 class={titleClass}>Base de Loisirs de la Dr&eacute;e</h4>
+            </div>
+          </div>
+          <p class={bodyClass}>
+            Mini-golf, playground, ping-pong, baby-foot, and a riverside picnic area.
+            Free entry, right here in Epinac.
+          </p>
+        </a>
+
+        <a href="https://www.chateaudecouches.com/" target="_blank" rel="noopener" class={cardLink}>
+          <div class="flex items-start gap-3 sm:gap-4 mb-3">
+            <WatercolorIcon src="/illustrations/wc-act-castle.jpg" alt="" size="xl" />
+            <div class="min-w-0 pt-0.5">
+              <h4 class={titleClass}>Ch&acirc;teau de Couches</h4>
+            </div>
+          </div>
+          <p class={bodyClass}>
+            11th-century fortress with wine tasting (6 wines), towers, underground passages,
+            and a Gothic chapel. Kids love the tunnels!
+          </p>
+        </a>
+
+        <a href="https://acrogivry.fr/" target="_blank" rel="noopener" class={cardLink}>
+          <div class="flex items-start gap-3 sm:gap-4 mb-3">
+            <WatercolorIcon src="/illustrations/wc-act-trees.jpg" alt="" size="xl" />
+            <div class="min-w-0 pt-0.5">
+              <h4 class={titleClass}>Acrogivry &mdash; Treetop Adventure</h4>
+            </div>
+          </div>
+          <p class={bodyClass}>
+            The largest adventure park in Burgundy! 31 courses, 350+ aerial challenges.
+            13 kids&rsquo; courses (from age 3) and 18 for teens/adults up to 20m high.
+          </p>
+        </a>
+
+        <a href="https://www.lesgambades-equitation.fr/" target="_blank" rel="noopener" class={cardLink}>
+          <div class="flex items-start gap-3 sm:gap-4 mb-3">
             <WatercolorIcon src="/illustrations/wc-more-horse.jpg" alt="" size="xl" />
-            <div class="min-w-0">
-              <h4 class="font-semibold text-charcoal group-hover:text-wine transition-colors">Horse &amp; Pony Riding</h4>
-              <p class="text-xs text-charcoal/60 mt-1">
+            <div class="min-w-0 pt-0.5">
+              <h4 class={titleClass}>Horse &amp; Pony Riding</h4>
+            </div>
+          </div>
+          <p class={bodyClass}>
             Les Gambades (Gacogne) &mdash; Baby pony from age 4, trail rides for older kids &amp; adults.
             &euro;19/hour. In the heart of the Morvan.
-              </p>
-            </div>
-          </div>
+          </p>
         </a>
 
-        <a href="https://www.toutcrin-morvan-equitation.fr/" target="_blank" rel="noopener"
-           class="block bg-cream rounded-xl p-4 sm:p-5 hover:shadow-md transition-shadow group">
-          <div class="flex items-start gap-3 sm:gap-4">
+        <a href="https://www.toutcrin-morvan-equitation.fr/" target="_blank" rel="noopener" class={cardLink}>
+          <div class="flex items-start gap-3 sm:gap-4 mb-3">
             <WatercolorIcon src="/illustrations/wc-more-horse2.jpg" alt="" size="xl" />
-            <div class="min-w-0">
-              <h4 class="font-semibold text-charcoal group-hover:text-wine transition-colors">Tout Crin Equestrian</h4>
-              <p class="text-xs text-charcoal/60 mt-1">
+            <div class="min-w-0 pt-0.5">
+              <h4 class={titleClass}>Tout Crin Equestrian</h4>
+            </div>
+          </div>
+          <p class={bodyClass}>
             Pony discovery from age 2.5, half-day &amp; full-day options. Small groups,
             gentle ponies. Open April&ndash;November.
-              </p>
-            </div>
-          </div>
+          </p>
         </a>
 
-        <div class="bg-cream rounded-xl p-4 sm:p-5">
-          <div class="flex items-start gap-3 sm:gap-4">
+        <div class={cardStatic}>
+          <div class="flex items-start gap-3 sm:gap-4 mb-3">
             <WatercolorIcon src="/illustrations/wc-more-velorail.jpg" alt="" size="xl" />
-            <div class="min-w-0">
+            <div class="min-w-0 pt-0.5">
               <h4 class="font-semibold text-charcoal">V&eacute;lorail du Morvan</h4>
-              <p class="text-xs text-charcoal/60 mt-1">
+            </div>
+          </div>
+          <p class={bodyClass}>
             Pedal-carts on old railway tracks through the countryside.
             Fun for the whole family. ~45 min from Epinac.
-              </p>
-            </div>
-          </div>
+          </p>
         </div>
 
-        <a href="https://www.autun-tourisme.com/evadez-vous/en-famille/" target="_blank" rel="noopener"
-           class="block bg-cream rounded-xl p-4 sm:p-5 hover:shadow-md transition-shadow group">
-          <div class="flex items-start gap-3 sm:gap-4">
+        <a href="https://www.autun-tourisme.com/evadez-vous/en-famille/" target="_blank" rel="noopener" class={cardLink}>
+          <div class="flex items-start gap-3 sm:gap-4 mb-3">
             <WatercolorIcon src="/illustrations/wc-more-eagle.jpg" alt="" size="xl" />
-            <div class="min-w-0">
-              <h4 class="font-semibold text-charcoal group-hover:text-wine transition-colors">&Eacute;chapp&eacute;e Morvan d&rsquo;Ailes</h4>
-              <p class="text-xs text-charcoal/60 mt-1">
+            <div class="min-w-0 pt-0.5">
+              <h4 class={titleClass}>&Eacute;chapp&eacute;e Morvan d&rsquo;Ailes</h4>
+            </div>
+          </div>
+          <p class={bodyClass}>
             Walk with birds of prey in the wild. Educational, magical for kids,
             and a unique experience in the Morvan forest.
-              </p>
-            </div>
-          </div>
+          </p>
         </a>
 
-        <a href="https://www.bibracte.fr/" target="_blank" rel="noopener"
-           class="block bg-cream rounded-xl p-4 sm:p-5 hover:shadow-md transition-shadow group">
-          <div class="flex items-start gap-3 sm:gap-4">
+        <a href="https://www.bibracte.fr/" target="_blank" rel="noopener" class={cardLink}>
+          <div class="flex items-start gap-3 sm:gap-4 mb-3">
             <WatercolorIcon src="/illustrations/wc-more-bibracte.jpg" alt="" size="xl" />
-            <div class="min-w-0">
-              <h4 class="font-semibold text-charcoal group-hover:text-wine transition-colors">Bibracte &mdash; Gaulish Capital</h4>
-              <p class="text-xs text-charcoal/60 mt-1">
+            <div class="min-w-0 pt-0.5">
+              <h4 class={titleClass}>Bibracte &mdash; Gaulish Capital</h4>
+            </div>
+          </div>
+          <p class={bodyClass}>
             Archaeological site &amp; museum on Mont Beuvray. Explore where the Gauls
             lived 2,000 years ago. ~45 min drive.
-              </p>
-            </div>
-          </div>
+          </p>
         </a>
 
-        <a href="https://www.autun-tourisme.com/en/" target="_blank" rel="noopener"
-           class="block bg-cream rounded-xl p-4 sm:p-5 hover:shadow-md transition-shadow group">
-          <div class="flex items-start gap-3 sm:gap-4">
+        <a href="https://www.autun-tourisme.com/en/" target="_blank" rel="noopener" class={cardLink}>
+          <div class="flex items-start gap-3 sm:gap-4 mb-3">
             <WatercolorIcon src="/illustrations/wc-more-roman.jpg" alt="" size="xl" />
-            <div class="min-w-0">
-              <h4 class="font-semibold text-charcoal group-hover:text-wine transition-colors">Autun Roman Heritage</h4>
-              <p class="text-xs text-charcoal/60 mt-1">
+            <div class="min-w-0 pt-0.5">
+              <h4 class={titleClass}>Autun Roman Heritage</h4>
+            </div>
+          </div>
+          <p class={bodyClass}>
             The Roman theatre (one of the largest in Gaul), medieval cathedral of
             Saint-Lazare, and a charming town to wander. 20 min drive.
-              </p>
-            </div>
-          </div>
+          </p>
         </a>
 
-        <a href="https://www.autun-tourisme.com/offres/balade-contee-le-temps-des-mines-epinac-fr-3701961/" target="_blank" rel="noopener"
-           class="block bg-cream rounded-xl p-4 sm:p-5 hover:shadow-md transition-shadow group">
-          <div class="flex items-start gap-3 sm:gap-4">
+        <a href="https://www.autun-tourisme.com/offres/balade-contee-le-temps-des-mines-epinac-fr-3701961/" target="_blank" rel="noopener" class={cardLink}>
+          <div class="flex items-start gap-3 sm:gap-4 mb-3">
             <WatercolorIcon src="/illustrations/wc-more-mine.jpg" alt="" size="xl" />
-            <div class="min-w-0">
-              <h4 class="font-semibold text-charcoal group-hover:text-wine transition-colors">Mining Heritage Walk</h4>
-              <p class="text-xs text-charcoal/60 mt-1">
+            <div class="min-w-0 pt-0.5">
+              <h4 class={titleClass}>Mining Heritage Walk</h4>
+            </div>
+          </div>
+          <p class={bodyClass}>
             &ldquo;Le Temps des Mines&rdquo; &mdash; a 1.5h guided walk through Epinac&rsquo;s
             old mining quarter. Discover the town&rsquo;s industrial past.
-              </p>
-            </div>
-          </div>
+          </p>
         </a>
 
-        <a href="https://www.beaune-tourisme.fr/" target="_blank" rel="noopener"
-           class="block bg-cream rounded-xl p-4 sm:p-5 hover:shadow-md transition-shadow group">
-          <div class="flex items-start gap-3 sm:gap-4">
+        <a href="https://www.beaune-tourisme.fr/" target="_blank" rel="noopener" class={cardLink}>
+          <div class="flex items-start gap-3 sm:gap-4 mb-3">
             <WatercolorIcon src="/illustrations/wc-more-wine.jpg" alt="" size="xl" />
-            <div class="min-w-0">
-              <h4 class="font-semibold text-charcoal group-hover:text-wine transition-colors">Beaune Day Trip</h4>
-              <p class="text-xs text-charcoal/60 mt-1">
-                The wine capital of Burgundy (40 min). Famous Hosp&iacute;ces,
-                wine shops, and tasting in 16th-century cellars at Caveau D&eacute;licave.
-              </p>
+            <div class="min-w-0 pt-0.5">
+              <h4 class={titleClass}>Beaune Day Trip</h4>
             </div>
           </div>
+          <p class={bodyClass}>
+            The wine capital of Burgundy (40 min). Famous Hosp&iacute;ces,
+            wine shops, and tasting in 16th-century cellars at Caveau D&eacute;licave.
+          </p>
         </a>
 
       </div>
